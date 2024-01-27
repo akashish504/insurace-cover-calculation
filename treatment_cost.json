@@ -1,0 +1,38 @@
+{
+    "HEART_DISEASE":{
+        "tier_1": 500000,
+        "tier_2": 375000
+    },
+    "DIABETES":{
+        "tier_1": 350000,
+        "tier_2": 300000
+    },
+    "HYPERTENSION":{
+        "tier_1": 385000,
+        "tier_2": 350000
+    },
+    "RESPIRATORY":{
+        "tier_1": 1000000,
+        "tier_2": 1000000
+    },
+    "GASTROINTESTINAL":{
+        "tier_1": 400000,
+        "tier_2": 340000
+    },
+    "GENITO_URINARY":{
+        "tier_1": 540000,
+        "tier_2": 475000
+    },
+    "PSYCHIATRIC_NEUROLOGICAL":{
+        "tier_1": 385000,
+        "tier_2": 300000
+    },
+    "MUSCOLO_SKELETOL":{
+        "tier_1": 350000,
+        "tier_2": 280000
+    },
+    "CANCER":{
+        "tier_1": 1000000,
+        "tier_2": 1000000
+    }
+}

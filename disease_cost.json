@@ -1,0 +1,58 @@
+{
+    "COMMUNICALBLE": {
+        "tier_1": 82644,
+        "tier_2": 69194
+    },
+    "HEART_DISEASE": {
+        "tier_1": 323571,
+        "tier_2": 259286
+    },
+    "DIABETES": {
+        "tier_1": 129055,
+        "tier_2": 109735
+    },
+    "HYPERTENSION": {
+        "tier_1": 331667,
+        "tier_2": 283333
+    },
+    "CANCER": {
+        "tier_1": 500000,
+        "tier_2": 450000
+    },
+    "RESPIRATORY": {
+        "tier_1": 238333,
+        "tier_2": 187500
+    },
+    "GASTROINTESTINAL": {
+        "tier_1": 129286,
+        "tier_2": 104286
+    },
+    "GENITO_URINARY": {
+        "tier_1": 156364,
+        "tier_2": 126818
+    },
+    "PSYCHIATRIC_NEUROLOGICAL": {
+        "tier_1": 257500,
+        "tier_2": 204167
+    },
+    "MUSCOLO_SKELETOL": {
+        "tier_1": 291667,
+        "tier_2": 211667
+    },
+    "EYE": {
+        "tier_1": 64286,
+        "tier_2": 47380
+    },
+    "OBSTRETIC_NEONATAL": {
+        "tier_1": 93750,
+        "tier_2": 67500
+    },
+    "INJURIES": {
+        "tier_1": 232951,
+        "tier_2": 190169
+    },
+    "OTHER": {
+        "tier_1": 256120,
+        "tier_2": 136725
+    }
+}
