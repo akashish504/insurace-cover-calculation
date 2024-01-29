@@ -3,13 +3,13 @@ import json
 def insuranceCover(
     age = 27,
     tier = "tier_1",
-    pre_existing_diease='',
-    genetic_history='',
-    smoking_and_drinking ='',
+    pre_existing_diease_genetic_history = '',
+    smoking_and_drinking = False,
 ): 
     
 
     INFLATION_RATE = 7
+    SMOKING_AND_DRINKING_OFFSET = 200000
     base_amount = 0
 
     # Add more critical illnesses as desired
@@ -73,21 +73,26 @@ def insuranceCover(
     
     # code to calcualte amount for PED
 
-    if pre_existing_diease in CRITICAL_ILLNESS:
+    if smoking_and_drinking:
+        base_amount += SMOKING_AND_DRINKING_OFFSET
+
+    if pre_existing_diease_genetic_history in CRITICAL_ILLNESS:
         message = "Since you already have a prexisting disease, we recommend you to buy insurance with cover " + str(int(base_amount)) + ". This will be coving you for long duration. Plus we would also recommend you to add some additional amount in your cover."
         print(message)
         return message
 
     
-    if pre_existing_diease in treatment_cost_data.keys():
-        base_amount_ped = treatment_cost_data[pre_existing_diease][tier] * pow(1+INFLATION_RATE/100, 60 - age)
+    if pre_existing_diease_genetic_history in treatment_cost_data.keys():
+        base_amount_ped = treatment_cost_data[pre_existing_diease_genetic_history][tier] * pow(1+INFLATION_RATE/100, 60 - age)
+        if smoking_and_drinking:
+            base_amount_ped += SMOKING_AND_DRINKING_OFFSET
         message = "Since you already have a prexisting disease, we recommend you to buy insurance with cover " + str(int(base_amount_ped)) + ". This will be coving you for long duration."
         if base_amount_ped > 2000000:
             message  = "Since you already have a prexisting disease, we recommend you to buy insurance with cover 2000000. This will be coving you for long duration. We also recommend you to buy supertop in existing insurance."
         print(message)
         return message
 
-    if pre_existing_diease == "Others":
+    if pre_existing_diease_genetic_history == "Others":
         base_amount += 500000 
         message = "Since you already have a prexisting disease, we recommend you to buy insurance with cover " + str(int(base_amount)) + ". This will be coving you for long duration."
         print(message)
@@ -97,6 +102,8 @@ def insuranceCover(
 
     if age < 40:
         message += " We also recommed you to re-evaluate you cover amount in next 10 years."
+     
+    
     print(message)
     return message
     
